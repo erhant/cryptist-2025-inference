@@ -1,0 +1,16 @@
+- title: "Verifiable & Private Inference, without ZK and FHE"
+- speaker: "Erhan Tezcan"
+- abstract:
+    "This talk explores methods for verifiable and private LLM inference,\
+    focusing on novel approaches that target the transformer model,\
+    besides the existing ZK or FHE based solutions. We will discuss the limitations of ZK and FHE,\
+    and introduce alternative techniques that enhance privacy and verifiability in LLM inference,\
+    particularly in the context of permissionless systems with trustless inference providers."
+- session: "Talk"
+- track: "Protocol Design"
+- difficulty: "Intermediate"
+- cryptist:
+    - "X / Twitter"
+    - "Telegram Group"
+    - "A friend of colleague"
+    - "Cryptography / ZK / Privacy Meetup"
