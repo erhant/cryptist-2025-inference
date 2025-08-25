@@ -3,36 +3,33 @@
 
 == whoami
 
-- Leav Developer at *Dria*.
-- This presentation is written in *Typst*, a typesetting language built in Rust!
+- Lead Developer at *Dria*
+- We are building a peer-to-peer network of
 
-== What is libp2p?
+== State of AI & LLMs
 
-libp2p#footnote("https://github.com/libp2p/rust-libp2p") is a modular peer-to-peer networking stack, driven by well-designed specifications with several implementations (Go, JavaScript, *Rust*, C).
+Artificial Intelligence (AI), and Large Language Models (LLMs) in particular, are revolutionizing the world. Close to %10 of the entire world population is using ChatGPT alone#footnote("https://backlinko.com/chatgpt-stats").
 
-Rust implementation of libp2p in particular is being used in notable projects like *IPFS* client, *Lighthouse* Ethereum consensus client, *Filecoin* client, *Substrate* (of Polkadot), and many more.
+New models are coming out every week, smashing the existing records on numerous benchmarks, with an ever increasing performance demand. #footnote("https://hai.stanford.edu/ai-index/2025-ai-index-report").
 
+We are actually progressing faster than we though we were, as noted by powerhouse's such as OpenAI, Anthropic, and Google DeepMind#footnote("https://80000hours.org/agi/guide/when-will-agi-arrive/").
 
-== Protocol Stack
+== State of AI & LLMs
 
-#columns(2)[
-  === Connection
-  - TCP, QUIC, WebSocket
-  - Multiplexing (*Yamux*, *mplex*)
-  - Security (*Noise*)
+Within this talk, we are specifically interested in the *inference* part of the AI/LLM stack. Inference is the process of running a trained model to make predictions or generate outputs based on new input data, as shown in @inference.
 
-  === Discovery
-  - Kademlia DHT
-  - Multicast DNS (mDNS)
-  - Rendezvous
+#figure(
+  image("img/01_inference-1.svg"),
+  caption: [
+    Inference
+  ],
+) <inference>
 
-  #colbreak()
+== State of AI & LLMs
 
-  === Communication
+There are two problems with @inference though:
 
-  - GossipSub
-  - Request-Response
-  - DCutR
-]
+- Is *Server* really using `model` and `message` to generate the `output`?
+- Is *Server* looking into user `message`?
 
-
+These problems are denoted as *verifiable inference* and *private inference*, respectively.

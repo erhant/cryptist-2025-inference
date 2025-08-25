@@ -4,12 +4,12 @@
 #show: university-theme.with(
   aspect-ratio: "16-9",
   config-info(
-    title: "libp2p",
-    subtitle: "Modular Peer-to-Peer Networking Stack for Rust",
-    short-title: "github.com/erhant/rustconnect-libp2p",
+    title: "Verifiable & Private Inference",
+    subtitle: "Methods beyond ZK & FHE",
+    short-title: "github.com/erhant/cryptist-2025-inference",
     author: "Erhan Tezcan",
-    date: "4.5.2025",
-    institution: "Blockchain Dev. @ Dria",
+    date: "4.9.2025",
+    institution: "Lead Developer @ Dria",
   ),
   config-colors(
     primary: rgb("#B7410E"), // rust orange
@@ -24,5 +24,8 @@
 // #outline()
 
 #include "introduction.typ"
+
+#bibliography("references.bib")
+
 
 = Thank You!
