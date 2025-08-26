@@ -1,3 +1,4 @@
+#import "globals.typ": *
 
 = Introduction
 
@@ -27,9 +28,17 @@ Within this talk, we are specifically interested in the *inference* part of the 
 
 == State of AI & LLMs
 
-There are two problems with @inference though:
+There are two problems with such an inference:
 
-- Is *Server* really using `model` and `message` to generate the `output`?
-- Is *Server* looking into user `message`?
+- Is the *Server* really using `model` and `message` to generate the `output`?
+- Is the *Server* peeking into user `message`?
 
 These problems are denoted as *verifiable inference* and *private inference*, respectively.
+
+== Problem Setting
+
+We would like to focus on *consumer-grade* model providers in particular, as they can:
+
+- Locally serve models on their own hardware, utilizing their idle-compute on open-source models
+- Join a permissionless network & earn from their services
+- Decentralize the inference market, which is currently dominated by a few big players

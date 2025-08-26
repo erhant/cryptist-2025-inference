@@ -1,13 +1,13 @@
-.PHONY: watch open
+
 
 INPUT=src/main.typ
 OUTPUT=presentation.pdf
 
-watch: compile
-	typst watch $(INPUT) $(OUTPUT)
-
 open: compile
 	open $(OUTPUT)
+
+watch: compile
+	typst watch $(INPUT) $(OUTPUT)
 
 # compile the main if any changes are made to the source files
 compile: src/*.typ

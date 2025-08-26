@@ -1,6 +1,6 @@
-#import "@preview/touying:0.6.1": *
-#import themes.university: *
+#import "globals.typ": *
 
+#set text(size: 20pt)
 #show: university-theme.with(
   aspect-ratio: "16-9",
   config-info(
@@ -20,12 +20,19 @@
   ),
 )
 
+
 #title-slide()
 // #outline()
 
-#include "introduction.typ"
+#include "01_introduction.typ"
+#include "02_zkfhetee.typ"
+#include "03_transformers.typ"
+#include "04_vanilla.typ"
+#include "05_splitting.typ"
+#include "06_stip.typ"
+#include "07_toploc.typ"
 
-#bibliography("references.bib")
+#load-bib(main: true)
 
 
 = Thank You!
