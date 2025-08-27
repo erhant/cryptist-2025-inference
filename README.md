@@ -36,6 +36,16 @@ To compile the [figures](./src/img/):
 make figures
 ```
 
+> [!NOTE]
+>
+> Mermaid figures require a preamble to disable `htmlLabels`:
+>
+> ```sh
+> %%{ init: { "htmlLabels": false, "sequenceDiagram": { "htmlLabels": false } } }%%
+> ```
+>
+> Otherwise, the rendering will have issues in Typst.
+
 ## License
 
 Licensed under the [MIT License](./LICENSE).

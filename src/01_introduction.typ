@@ -11,7 +11,7 @@
 
 Artificial Intelligence (AI), and Large Language Models (LLMs) in particular, are revolutionizing the world. Close to %10 of the entire world population is using ChatGPT alone#footnote("https://backlinko.com/chatgpt-stats").
 
-New models are coming out every week, smashing the existing records on numerous benchmarks, with an ever increasing performance demand. #footnote("https://hai.stanford.edu/ai-index/2025-ai-index-report").
+New models are coming out every week, smashing the existing records on numerous benchmarks, with an ever increasing performance demand#footnote("https://hai.stanford.edu/ai-index/2025-ai-index-report").
 
 We are actually progressing faster than we though we were, as noted by powerhouse's such as OpenAI, Anthropic, and Google DeepMind#footnote("https://80000hours.org/agi/guide/when-will-agi-arrive/").
 

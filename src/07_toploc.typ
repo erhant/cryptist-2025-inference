@@ -1,8 +1,13 @@
 #import "globals.typ": *
 
+= TOPLOC
+Locality Sensitive Hashing
+
 == TOPLOC
 
-TOPLOC: A Locality Sensitive Hashing Scheme for Trustless Verifiable Inference #cite(<ong2025toploclocalitysensitivehashing>)
+TOPLOC #cite(<ong2025toploclocalitysensitivehashing>) is a novel method of committing to an LLM-inference.
+
+It is vulnerable against speculative decoding: using a smaller & more efficient model for decoding phase, and then prefilling with the actual model.
 
 
 

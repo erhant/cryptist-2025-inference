@@ -3,6 +3,8 @@
 INPUT=src/main.typ
 OUTPUT=presentation.pdf
 
+
+
 open: compile
 	open $(OUTPUT)
 
@@ -18,5 +20,6 @@ src/img/%.svg: src/img/%.md
 	mmdc -i $< -o $@ -t neutral --pdfFit
 
 # compile all mermaid files in img folder
+# FIXME: this should only happen if the `md` file has changed
 figures: $(patsubst src/img/%.md,src/img/%.svg,$(wildcard src/img/*.md))
 	echo "Figures are up to date."

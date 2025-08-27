@@ -12,11 +12,11 @@
     institution: "Lead Developer @ Dria",
   ),
   config-colors(
-    primary: rgb("#B7410E"), // rust orange
-    secondary: rgb("#EC5800"), // bright rust
-    tertiary: rgb("#F74C00"), // warm orange
-    neutral: rgb("#2C2C2C"), // dark grey
-    neutral-darkest: rgb("#1C1C1C"), // darker grey
+    primary: rgb("#6463FF"), // vivid indigo
+    secondary: rgb("#1D1C2B"), // midnight indigo
+    tertiary: rgb("#14131D"), // near-black navy
+    neutral: rgb("#5E5B82"), // slate purple-grey
+    neutral-darkest: rgb("#0F0E15"), // deep black-grey
   ),
 )
 
@@ -28,7 +28,7 @@
 #include "02_zkfhetee.typ"
 #include "03_transformers.typ"
 #include "04_vanilla.typ"
-#include "05_splitting.typ"
+#include "05_verisplit.typ"
 #include "06_stip.typ"
 #include "07_toploc.typ"
 
