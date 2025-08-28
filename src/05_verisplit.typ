@@ -1,7 +1,7 @@
 #import "globals.typ": *
 
 = Veri-Split
-Secure and Practical Offloading of Machine Learning Inferences
+Secure & Practical Offloading of ML Inference
 
 == Splitting with Noise
 

@@ -1,25 +1,43 @@
-
+.PHONY: open watch compile figures clean
 
 INPUT=src/main.typ
 OUTPUT=presentation.pdf
 
+# Find all Typst source files
+TYPST_FILES = $(wildcard src/*.typ)
+
+# Find all Mermaid markdown files
+MERMAID_MD_FILES = $(wildcard src/img/*.md)
+
+# Find all existing SVG files that were generated from Mermaid
+EXISTING_SVG_FILES = $(wildcard src/img/*-[0-9].svg src/img/*-[0-9][0-9].svg)
 
 
-open: compile
-	open $(OUTPUT)
 
-watch: compile
-	typst watch $(INPUT) $(OUTPUT)
+# Main compilation target
+compile: $(OUTPUT)
 
-# compile the main if any changes are made to the source files
-compile: src/*.typ
+# The PDF depends on all Typst files and needs figures to be up to date
+$(OUTPUT): $(TYPST_FILES) figures
 	typst compile $(INPUT) $(OUTPUT)
 
-# compile mermaid figures to SVG
-src/img/%.svg: src/img/%.md
-	mmdc -i $< -o $@ -t neutral --pdfFit
+# Rule to generate SVG files from Mermaid markdown
+# This creates a timestamp file to track when figures were last built
+src/img/.figures_timestamp: $(MERMAID_MD_FILES)
+	@for md_file in $(MERMAID_MD_FILES); do \
+		echo "Compiling $$md_file..."; \
+		mmdc -i "$$md_file" -o "$${md_file%.md}.svg" -t neutral --pdfFit; \
+	done
+	@touch src/img/.figures_timestamp
 
-# compile all mermaid files in img folder
-# FIXME: this should only happen if the `md` file has changed
-figures: $(patsubst src/img/%.md,src/img/%.svg,$(wildcard src/img/*.md))
-	echo "Figures are up to date."
+# Convenience target to build all figures
+figures: src/img/.figures_timestamp
+
+open: $(OUTPUT)
+	open $(OUTPUT)
+
+watch:
+	typst watch $(INPUT) $(OUTPUT)
+
+clean:
+	rm -f $(OUTPUT) $(EXISTING_SVG_FILES) src/img/.figures_timestamp

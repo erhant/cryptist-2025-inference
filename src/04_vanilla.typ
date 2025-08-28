@@ -8,7 +8,7 @@ If you have a model provider that you would like to check for simple compliance 
 
 You can send a procedurally generated prompt with a known output, and check if the provider returns the correct result.
 
-- For mathematical reasoning, there are static analysis tools like MathVerify#footnote("https://github.com/huggingface/Math-Verify").
+- For mathematical reasoning, there are static analysis tools like MathVerify #cite(<mathverify>).
 - For code generation, you can use a sandboxed unit-test to check if the generated code works as expected.
 - For text generation, you can use a set of known question-answer pairs; or simply do a string inclusion check.
 
@@ -41,3 +41,6 @@ You need different challenges for each model, to avoid false-positives on small 
 
 #pause
 _story time_
+
+
+#load-bib()

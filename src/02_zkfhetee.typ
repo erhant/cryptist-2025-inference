@@ -64,6 +64,8 @@ All of these methods so far have drawbacks that limit their applicability in rea
 
 - LLMs make use of floating point arithmetic, bad for the finite field arithmetic in ZK and FHE.
 
-- TEEs require a trusted hardware environment, which is beyond a "consumer-grade" hardware. Furthermore, they operate in rather memory and compute constrained environments; yet still are open to side-channel attacks.
+- TEEs require a trusted hardware environment. Furthermore, they operate in rather memory and compute constrained environments; yet still are open to side-channel attacks *CITEME*.
+
+- These make it even harder for practical deployment in real-world applications, especially on consumer-grade devices.
 
 #load-bib()
