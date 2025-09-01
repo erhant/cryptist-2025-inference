@@ -28,33 +28,48 @@ Within LLM inference, a ZK-proof tells you that indeed your chosen model was use
 
 == Fully Homomorphic Encryption (FHE)
 
-FHE allows computation on encrypted data without decrypting it.
 
-- $"Enc"(a) + "Enc"(b) = "Enc"(a + b)$
-- $"Enc"(a) * "Enc"(b) = "Enc"(a * b)$
+#columns(2)[
+  FHE allows computation on encrypted data without decrypting it.
 
-This allows one to hide the input & output data during inference.
+  - $"Enc"(a) + "Enc"(b) = "Enc"(a + b)$
+  - $"Enc"(a) * "Enc"(b) = "Enc"(a * b)$
 
-#figure(
-  image("img/01_inference-3.svg"),
-  caption: [
-    Inference with FHE
-  ],
-) <inference-fhe>
+  This allows one to hide the input & output data during inference.
+
+  #colbreak()
+
+  #figure(
+    image("img/01_inference-3.svg"),
+    caption: [
+      Inference with FHE
+    ],
+  ) <inference-fhe>
+]
+
+
+
 
 
 == Trusted Execution Environments (TEE)
 
-TEEs are hardware-based secure enclaves (Intel SGX, ARM TrustZone, AMD SEV). They ensure isolated execution with memory encryption, along with a remote attestation to prove code integrity.
+#columns(2)[
+  TEEs are hardware-based secure enclaves (Intel SGX, ARM TrustZone, AMD SEV). They ensure isolated execution with memory encryption, along with a remote attestation to prove code integrity.
 
-We get both the privacy and verifiability at once here, at the cost of a trusted attestion service and hardware.
+  We get both the privacy and verifiability at once here, at the cost of a trusted attestion service and hardware.
 
-#figure(
-  image("img/01_inference-4.svg"),
-  caption: [
-    Inference with TEE
-  ],
-) <inference-tee>
+  #colbreak()
+
+  #figure(
+    image("img/01_inference-4.svg"),
+    caption: [
+      Inference with TEE
+    ],
+  ) <inference-tee>
+]
+
+
+
 
 == Problems with ZK & FHE & TEE
 
@@ -64,7 +79,7 @@ All of these methods so far have drawbacks that limit their applicability in rea
 
 - LLMs make use of floating point arithmetic, bad for the finite field arithmetic in ZK and FHE.
 
-- TEEs require a trusted hardware environment. Furthermore, they operate in rather memory and compute constrained environments; yet still are open to side-channel attacks *CITEME*.
+- TEEs require a trusted hardware environment. Furthermore, they operate in rather memory and compute constrained environments; yet still are open to side-channel attacks #cite(<li2023surveysecurecomputationusing>).
 
 - These make it even harder for practical deployment in real-world applications, especially on consumer-grade devices.
 

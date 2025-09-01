@@ -1,2 +1,5 @@
 *.svg
+
+# mermaid generated figures
+.01-inference*.svg
 .figures_timestamp

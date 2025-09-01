@@ -12,22 +12,29 @@ With that, they can generate text by outputting one token at a time, and feeding
 
 This brings *emergent capabilities*: reasoning, knowledge synthesis, code generation, and much more.
 
-== The Transformer
+#pause
 
 The dominant architecture today is the Transformer, introduced in "Attention is All You Need" (2017) #cite(<vaswani2023attentionneed>).
 
 - Replaced RNNs with *self-attention* mechanism.
 - Parallel processing enables efficient training.
 
-#figure(
-  image("img/transformer.png"),
-) <transformer>
+
 
 == Key Components
 
-- *Self-Attention*: allows tokens to attend to all other tokens in sequence; multiple attention heads capture different relationships.
-- *Feed-Forward Networks*: position-wise fully connected layers; provides non-linear transformations.
-- *Layer Normalization & Residual Connections*: stabilizes training and enables deeper networks.
+#columns(2)[
+
+  - *Self-Attention*: allows tokens to attend to all other tokens in sequence; multiple attention heads capture different relationships.
+  - *Feed-Forward Networks*: position-wise fully connected layers; provides non-linear transformations.
+  - *Layer Normalization & Residual Connections*: stabilizes training and enables deeper networks.
+
+  #colbreak()
+
+  #figure(
+    image("img/transformer.png"),
+  ) <transformer>
+]
 
 == Encoder-Decoder
 

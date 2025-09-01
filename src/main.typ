@@ -18,6 +18,14 @@
     neutral: rgb("#5E5B82"), // slate purple-grey
     neutral-darkest: rgb("#0F0E15"), // deep black-grey
   ),
+  config-methods(
+    // https://touying-typ.github.io/docs/0.5.x/global-settings#global-styles
+    init: (self: none, body) => {
+      set text(size: 22pt)
+
+      body
+    },
+  ),
 )
 
 
@@ -29,10 +37,22 @@
 #include "03_transformers.typ"
 #include "04_vanilla.typ"
 #include "05_verisplit.typ"
-#include "06_stip.typ"
-#include "07_toploc.typ"
+#include "06_toploc.typ"
+#include "07_stip.typ"
+#include "08_future.typ"
+
+#pagebreak()
 
 #load-bib(main: true)
 
 
-= Thank You!
+// last slide title:
+= Q & A
+#align(center)[
+  #text(size: 16pt)[
+    _slides_ --- github.com/erhant/cryptist-2025-inference
+
+    _reach out_ --- x.com/0xerhant
+  ]
+]
+

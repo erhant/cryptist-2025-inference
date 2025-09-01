@@ -10,6 +10,15 @@ Secure & Practical Offloading of ML Inference
 
 https://arxiv.org/html/2405.20681v1 says privacy with noise MUST incur loss
 
+
+#figure(
+  image("img/verisplit-noise.png"),
+  caption: [
+    Split with Noise
+  ],
+) <verisplit-noise>
+
+
 == Commitment with Merkle Trees
 
 Veri-Split paper also proposes using a Merkle Tree for comitting to intermediate layers, followed by a random interactive protocol to request Merkle Proofs.

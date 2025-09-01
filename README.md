@@ -6,7 +6,7 @@
 
 ## Installation
 
-This presentation is created with [Typst](https://github.com/typst/typst), using the [touying](https://github.com/touying-typ/touying) theme. You need to have **Typst** installed to build locally.
+This presentation is created with [Typst](https://github.com/typst/typst), using the [touying](https://github.com/touying-typ/touying) theme. You need to have **Typst** [installed](https://github.com/typst/typst?tab=readme-ov-file#installation) to build locally.
 
 Then, simply clone the repo:
 
@@ -18,16 +18,16 @@ Diagrams are generated with [Mermaid CLI](https://mermaid.js.org/).
 
 ## Usage
 
-To serve this presentation in your browser, run:
-
-```sh
-make watch
-```
-
-To export the slides to PDF format, run:
+Use `open` to compile & open the presentation:
 
 ```sh
 make open
+```
+
+You can also open in `watch` mode:
+
+```sh
+make watch
 ```
 
 To compile the [figures](./src/img/):
@@ -38,13 +38,11 @@ make figures
 
 > [!NOTE]
 >
-> Mermaid figures require a preamble to disable `htmlLabels`:
+> Mermaid figures require a preamble to disable `htmlLabels`; otherwise, the rendering will have issues in Typst.
 >
-> ```sh
+> ```js
 > %%{ init: { "htmlLabels": false, "sequenceDiagram": { "htmlLabels": false } } }%%
 > ```
->
-> Otherwise, the rendering will have issues in Typst.
 
 ## License
 

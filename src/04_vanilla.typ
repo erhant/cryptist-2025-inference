@@ -6,6 +6,7 @@
 
 If you have a model provider that you would like to check for simple compliance (especially for smal models), a better-than-nothing is to use a simple challenge & verify method.
 
+#pause
 You can send a procedurally generated prompt with a known output, and check if the provider returns the correct result.
 
 - For mathematical reasoning, there are static analysis tools like MathVerify #cite(<mathverify>).
@@ -31,16 +32,15 @@ A simple example:
 There are multiple problems with this approach:
 
 #pause
-*False-negatives*: sometimes the model is just not clever, and fails the challenge. Other times, the verification process may be faulty. You should provide a *margin of error*, instead of banning on first failure.
+- *False-negatives*: sometimes the model is just not clever, and fails the challenge. Other times, the verification process may be faulty. You should provide a *margin of error*, instead of banning on first failure.
 
 #pause
-A clever attacker could detect the challenge, and *only* run honest model for those challenges.
+- A clever attacker could detect the challenge, and *only* run honest model for those challenges.
 
 #pause
-You need different challenges for each model, to avoid false-positives on small models acting like large ones while passing the easy challenges.
+- You need different challenges for each model, to avoid false-positives on small models acting like large ones while passing the easy challenges.
 
 #pause
-_story time_
-
+- Models can be funny: "How many legs are there among 0 snakes and 0 snakes?", the model says: "Of course none at all hahah!" instead of "0".
 
 #load-bib()
