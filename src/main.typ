@@ -9,7 +9,7 @@
     short-title: "github.com/erhant/cryptist-2025-inference",
     author: "Erhan Tezcan",
     date: "4.9.2025",
-    institution: "Lead Developer @ Dria",
+    // institution: "Lead Developer @ Dria",
   ),
   config-colors(
     primary: rgb("#6463FF"), // vivid indigo

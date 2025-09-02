@@ -4,8 +4,17 @@
 
 == whoami
 
-- Lead Developer at *Dria*
-- We are building a peer-to-peer network of
+- Lead Developer at *Dria*#footnote("https://dria.co")
+- We are building:
+  - A permissionless peer-to-peer network of locally-served LLMs (\~27k nodes).
+  - Special-purpose _tiny_ models#footnote("https://huggingface.co/driaforall").
+  - A custom-built inference engine & compiler for distributed serving of LLMs.
+  - A decentralized AI application layer over the network.
+
+- Interested in zero-knowledge cryptography for the last ~3 years, with a focus on developer tooling & Circom.
+
+
+This presentation is written in *Typst*, and is open-source at the link at the bottom of the slide.
 
 == State of AI & LLMs
 
@@ -20,7 +29,7 @@ We are actually progressing faster than we though we were, as noted by powerhous
 Within this talk, we are specifically interested in the *inference* part of the AI/LLM stack. Inference is the process of running a trained model to make predictions or generate outputs based on new input data, as shown in @inference.
 
 #figure(
-  image("img/01_inference-1.svg"),
+  image("img/figures-1.svg"),
   caption: [
     Inference
   ],

@@ -3,16 +3,12 @@
 INPUT=src/main.typ
 OUTPUT=presentation.pdf
 
-# Find all Typst source files
+# Typst source files
 TYPST_FILES = $(wildcard src/*.typ)
-
-# Find all Mermaid markdown files
+# Mermaid markdown files
 MERMAID_MD_FILES = $(wildcard src/img/*.md)
-
-# Find all existing SVG files that were generated from Mermaid
+# SVG files that were generated from Mermaid
 EXISTING_SVG_FILES = $(wildcard src/img/*-[0-9].svg src/img/*-[0-9][0-9].svg)
-
-
 
 # Main compilation target
 compile: $(OUTPUT)

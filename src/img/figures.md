@@ -61,3 +61,23 @@ sequenceDiagram
   S->>C: (2) encrypted(output)
   note over C: decrypt
 ```
+
+## TOPLOC
+
+```mermaid
+sequenceDiagram
+  participant V as Verifier
+  participant P as Prover
+
+  note over V, P: k for top-k
+  V ->> P: "message"
+  note over P: LLM = PrefillDecode(message)
+  note over P: output = LLM.out
+  note over P: h = LLM.last_hidden_state
+  note over P: P, m = commit(h)
+
+  P ->> V: P, m, output
+  note over V: LLM = Prefill(output)
+  note over V: h = LLM.last_hidden_state
+  note over V: compare local top-k to P with m
+```

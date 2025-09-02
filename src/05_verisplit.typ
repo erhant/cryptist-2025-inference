@@ -5,10 +5,17 @@ Secure & Practical Offloading of ML Inference
 
 == Splitting with Noise
 
-- for non-linear parts, they use the device itself
-- expensive matrix multiplication is off-loaded
+One of the early examples of privacy-preserving inference offloading comes with Veri-Split, where they do $y = W x + b$ as follows (for a 2-device 1 user setting):
 
-https://arxiv.org/html/2405.20681v1 says privacy with noise MUST incur loss
+- Generate random masks $delta$ and $beta$
+- Send $(W + delta)/2 , (b + beta)/2$ to one party
+- Send $(W - delta)/2 , (b - beta)/2$ to other party
+- Receive $y_1 = (W + delta)/2 * x + (b + beta)/2$
+- Receive $y_2 = (W - delta)/2 * x + (b - beta)/2$
+- Add them together to obtain $y = W x + b$
+
+Other *non-linear* computations are kept on the user device.
+
 
 
 #figure(
@@ -29,3 +36,5 @@ Veri-Split paper also proposes using a Merkle Tree for comitting to intermediate
     Merkle Tree for Intermediate Layer Commitment
   ],
 ) <verisplit-merkle>
+
+However, this may suffer from floating-point inconsistencies due to the nature of the computations involved.

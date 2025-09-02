@@ -17,7 +17,7 @@ It has three notable properties:
 == Zero-Knowledge Proofs (ZK)
 
 #figure(
-  image("img/01_inference-2.svg"),
+  image("img/figures-2.svg"),
   caption: [
     Inference with ZK
   ],
@@ -40,7 +40,7 @@ Within LLM inference, a ZK-proof tells you that indeed your chosen model was use
   #colbreak()
 
   #figure(
-    image("img/01_inference-3.svg"),
+    image("img/figures-3.svg"),
     caption: [
       Inference with FHE
     ],
@@ -61,7 +61,7 @@ Within LLM inference, a ZK-proof tells you that indeed your chosen model was use
   #colbreak()
 
   #figure(
-    image("img/01_inference-4.svg"),
+    image("img/figures-4.svg"),
     caption: [
       Inference with TEE
     ],
