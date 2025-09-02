@@ -14,7 +14,7 @@ Then, simply clone the repo:
 git clone git@github.com:erhant/cryptist-2025-inference
 ```
 
-Diagrams are generated with [Mermaid CLI](https://mermaid.js.org/).
+Diagrams are generated with [Mermaid](https://mermaid.js.org/).
 
 ## Usage
 

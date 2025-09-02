@@ -14,7 +14,7 @@
 - Interested in zero-knowledge cryptography for the last ~3 years, with a focus on developer tooling & Circom.
 
 
-This presentation is written in *Typst*, and is open-source at the link at the bottom of the slide.
+This presentation is written in *Typst*, and is open-source at the Github link at the bottom of the slide.
 
 == State of AI & LLMs
 
@@ -22,7 +22,7 @@ Artificial Intelligence (AI), and Large Language Models (LLMs) in particular, ar
 
 New models are coming out every week, smashing the existing records on numerous benchmarks, with an ever increasing performance demand#footnote("https://hai.stanford.edu/ai-index/2025-ai-index-report").
 
-We are actually progressing faster than we though we were, as noted by powerhouse's such as OpenAI, Anthropic, and Google DeepMind#footnote("https://80000hours.org/agi/guide/when-will-agi-arrive/").
+We are actually progressing faster than we thought we were, as noted by powerhouse's such as OpenAI, Anthropic, and Google DeepMind#footnote("https://80000hours.org/agi/guide/when-will-agi-arrive/").
 
 == State of AI & LLMs
 
