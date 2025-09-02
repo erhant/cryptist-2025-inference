@@ -1,7 +1,7 @@
 .PHONY: open watch compile figures clean
 
 INPUT=src/main.typ
-OUTPUT=presentation.pdf
+OUTPUT=Erhan_Tezcan_Verifiable_Private_Inference_CryptIst2025.pdf
 
 # Typst source files
 TYPST_FILES = $(wildcard src/*.typ)
