@@ -16,8 +16,6 @@ One of the early examples of privacy-preserving inference offloading comes with 
 
 Other *non-linear* computations are kept on the user device.
 
-
-
 #figure(
   image("img/verisplit-noise.png"),
   caption: [
@@ -37,4 +35,4 @@ Veri-Split paper also proposes using a Merkle Tree for comitting to intermediate
   ],
 ) <verisplit-merkle>
 
-However, this may suffer from floating-point inconsistencies due to the nature of the computations involved.
+Verifier can challenge the prover with random local computations, asking for their Merkle Proofs. However, this suffers from floating-point inconsistencies.
